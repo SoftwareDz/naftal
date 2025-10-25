@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نفطال - شركة الوقود الوطنية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <style>
+      .big-naftal {
+        font-size: 7rem;  
+        font-weight: 800;  
+        color: #1e40af;  
+        text-align: center;
+        margin: 30px 0;  
+        letter-spacing: 4px;  
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);  
+        transform: scale(1.1);  
+        display: block;
+        line-height: 1.2;  
+        position: relative;
+        transition: all 0.3s ease;
+        padding: 10px;
+      }
+
+      .big-naftal::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        width: 50%;
+        height: 3px;
+        background: currentColor;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .big-naftal:hover {
+        transform: scale(1.15);
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .big-naftal:hover::before {
+        transform: scaleX(1);
+      }
+
+      /* تغيير اللون في الوضع الداكن */
+      .dark .big-naftal {
+        color: #FFD700;  
+      }
+
+      /* إضافة خلفية خفيفة عند التحويم */
+      .big-naftal:hover {
+        background: radial-gradient(circle at center, rgba(30, 64, 175, 0.1) 0%, transparent 70%);
+      }
+
+      .dark .big-naftal:hover {
+        background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+      }
+    </style>
+    <script src="/src/js/theme.js" defer></script>
+    <script src="/src/js/navigation.js" defer></script>
+    <script src="/src/js/animations.js" defer></script>
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <header>
+      <div class="container">
+        <nav class="nav-wrapper">
+          <div class="logo">
+            <img src="/logo.svg" alt="نفطال" class="logo-image">
+            <span class="logo-text">نفطال</span>
+          </div>
+          
+          <ul class="nav-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#about">عن الشركة</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+          </ul>
+
+          <button id="theme-toggle" class="theme-toggle" aria-label="تبديل السمة">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container">
+          <h1>مرحباً بكم في </h1>
+          <h2 class="big-naftal">نفطال</h2>
+          <p>شريككم الموثوق في مجال الطاقة والوقود</p>
+          <button class="cta-button">اكتشف خدماتنا</button>
+        </div>
+      </section>
+
+      <section class="statistics">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number" data-target="2500">0</div>
+              <div class="stat-label">محطة خدمة</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="1000000">0</div>
+              <div class="stat-label">عميل راضٍ</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="50">0</div>
+              <div class="stat-label">سنة خبرة</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <h2 class="scroll-animate">خدماتنا</h2>
+          <div class="services-grid">
+            <div class="service-card scroll-animate">
+              <div class="service-icon">⛽</div>
+              <h3>خدمات الوقود</h3>
+              <p>نقدم أجود أنواع الوقود لسياراتكم</p>
+            </div>
+            <div class="service-card scroll-animate">
+              <div class="service-icon">🛢️</div>
+              <h3>زيوت المحركات</h3>
+              <p>زيوت عالية الجودة لجميع أنواع المركبات</p>
+            </div>
+            <div class="service-card scroll-animate">
+              <div class="service-icon">🔧</div>
+              <h3>خدمات الصيانة</h3>
+              <p>صيانة شاملة ومتكاملة لمركبتك</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>تواصل معنا</h3>
+            <p>الهاتف: 000-000-000</p>
+            <p>البريد الإلكتروني: info@naftal.dz</p>
+          </div>
+          <div class="footer-section">
+            <h3>روابط سريعة</h3>
+            <ul>
+              <li><a href="#faq">الأسئلة الشائعة</a></li>
+              <li><a href="#privacy">سياسة الخصوصية</a></li>
+              <li><a href="#terms">الشروط والأحكام</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>تابعنا</h3>
+            <div class="social-links">
+              <a href="#facebook">فيسبوك</a>
+              <a href="#twitter">تويتر</a>
+              <a href="#linkedin">لينكد إن</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p>by ahmed.limam</p>
+            <p> نفطال © 2025 - جميع الحقوق محفوظة</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
